@@ -1,8 +1,9 @@
 {
     "name": "fib-orm",
-    "version": "1.3.4",
+    "version": "1.4.0-dev",
     "description": "Object Relational Mapping for fibjs",
-    "main": "lib",
+    "main": "lib/index.js",
+    "types": "@types/index.d.ts",
     "repository": "git://github.com/fibjs/fib-orm.git",
     "author": "Liu Hu <lion@9465.net>",
     "homepage": "https://github.com/fibjs/fib-orm",
@@ -13,16 +14,25 @@
         "fibjs"
     ],
     "scripts": {
-        "ci": "fibjs test"
+        "ci": "fibjs test",
+        "bundle": "fibjs ./build/bundle"
     },
     "ci": {
-        "type": "travis"
+        "type": "travis",
+        "version": [
+            "0.21.0",
+            "0.22.0",
+            "0.23.0",
+            "0.24.0"
+        ]
     },
     "dependencies": {
         "orm": "^3.2.2"
     },
     "devDependencies": {
-        "@fibjs/ci": "^1.0.0",
+        "@fibjs/ci": "^2.0.0",
+        "@types/fibjs": "github:fibjs/fib-types",
+        "fib-typify": "^0.1.0",
         "lodash": "^4.17.4"
     }
 }
