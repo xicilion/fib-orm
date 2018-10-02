@@ -13,6 +13,10 @@
         "database",
         "fibjs"
     ],
+    "files": [
+        "@types",
+        "lib"
+    ],
     "scripts": {
         "ci": "fibjs test",
         "bundle": "fibjs ./build/bundle"
